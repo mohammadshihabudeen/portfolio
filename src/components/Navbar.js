@@ -119,16 +119,7 @@ const Navbar = () => {
         </nav>
         <nav className="flex items-center justify-center flex-wrap">
           <motion.a
-            href="https://twitter.com"
-            target="_blank"
-            whileHover={{ y: -2 }}
-            className="w-6 mx-3"
-            whileTap={{ scale: 0.9 }}
-          >
-            <TwitterIcon />
-          </motion.a>
-          <motion.a
-            href="https://twitter.com"
+            href="https://www.linkedin.com/in/mohammadshihabudeen/"
             target="_blank"
             whileHover={{ y: -2 }}
             className="w-6 mx-3 bg-light rounded-full"
@@ -137,13 +128,22 @@ const Navbar = () => {
             <GithubIcon />
           </motion.a>
           <motion.a
-            href="https://twitter.com"
+            href="https://www.linkedin.com/in/mohammadshihabudeen/"
             target="_blank"
             whileHover={{ y: -2 }}
             className="w-6 ml-3"
             whileTap={{ scale: 0.9 }}
           >
             <LinkedInIcon />
+          </motion.a>
+          <motion.a
+            href="https://twitter.com"
+            target="_blank"
+            whileHover={{ y: -2 }}
+            className="w-6 mx-3"
+            whileTap={{ scale: 0.9 }}
+          >
+            <TwitterIcon />
           </motion.a>
           <button
             onClick={() => setMode(mode === "light" ? "dark" : "light")}
@@ -168,7 +168,11 @@ const Navbar = () => {
         >
           <nav className="flex items-center flex-col justify-center">
             <CustomMobileLink href="/" title="Home" toggle={handleClick} />
-            <CustomMobileLink href="/about" title="About" toggle={handleClick} />
+            <CustomMobileLink
+              href="/about"
+              title="About"
+              toggle={handleClick}
+            />
             <CustomMobileLink
               href="/projects"
               title="Projects"
