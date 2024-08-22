@@ -1,24 +1,23 @@
-import React, { lazy, Suspense, useEffect, useMemo } from "react";
+import React, { Suspense, useEffect, useMemo,useState } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Image from "next/image";
 import { javascript, typescript, html, css, reactjs, tailwind, nodejs, postgresql, python, nextjs, expressjs } from "./skillAssets";
-
 // Loader Component
 const Loader = () => {
   const { progress } = useProgress();
   return (
-    <Html center className="flex flex-col items-center">
+    <div center className="flex flex-col items-center">
       <span className="canvas-loader"></span>
       <p className="text-xs font-semibold mt-10 text-light">{progress.toFixed(2)}%</p>
-    </Html>
+    </div>
   );
 };
 
 // Skill Component
-const Skill = React.memo(({ name, x, y, icon }) => {
+const Skill = ({ name, x, y, icon }) => {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.1 });
-  const [isClient, setIsClient] = React.useState(false);
+  const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
     setIsClient(true);
@@ -63,7 +62,7 @@ const Skill = React.memo(({ name, x, y, icon }) => {
       </motion.div>
     </motion.div>
   );
-});
+}
 
 const Skills = () => {
   const skills = useMemo(() => [
