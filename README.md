@@ -3,6 +3,7 @@ This repository contains starter code for Portfolio website created using NextJs
 ### Images of The Portfolio Website:
 ![Nextjs Portfolio Website](image.png)
 ![Nextjs Portfolio Website Dark Mode](image-1.png)
+![about page](image-2.png)
 ### Resources Used in This Project
 
 - Profile image in the home page created by using https://www.midjourney.com/ tool.
